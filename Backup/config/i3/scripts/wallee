@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+#################################################################
+#K-ratos/wallee
+
+#set the directory from where wallpapers are to be choosed 
+DIR="$HOME/.config/i3/wallpapers"
+
+#set the time interval for transition of wallpaper in minutes
+TIME=1
+
+while true
+
+	do
+		for f in $DIR/*
+			do
+		
+				`exec feh --bg-max "$f"`
+		
+				sleep $[ $TIME*60 ]
+			done
+	done
+
+
+###################################################################
